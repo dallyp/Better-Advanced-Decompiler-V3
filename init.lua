@@ -655,8 +655,6 @@ local function Decompile(bytecode)
 						lineStr ..= `[line {instructionLargeLine + instructionLine}] `
 					end
 
-					protoOutput ..= lineStr .. tostring(insnIndex) .. "."
-
 					addTab(1)
 
 					if SHOW_OPERATION_NAMES then
