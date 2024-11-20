@@ -1211,7 +1211,7 @@ local function Decompile(bytecode)
 								local k = proto.constsTable[id]
 								protoOutput ..= handleConstantValue(k)
 								if i < t.size then
-									protoOutput ..= ", "
+									protoOutput ..= ",\n"
 								end
 							end
 							--addTab(depth)
