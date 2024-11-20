@@ -1209,13 +1209,15 @@ local function Decompile(bytecode)
 							for i = 1, t.size do
 								local id = t.keys[i]
 								local k = proto.constsTable[id]
+								protoOutput ..= "    "
 								protoOutput ..= handleConstantValue(k)
 								if i < t.size then
 									protoOutput ..= ",\n"
+								else
+									protoOutput ..= "\n"
 								end
 							end
-							--addTab(depth)
-							protoOutput ..= "}"
+							protoOutput ..= "}\n"
 						end
 						opConstructors["SETLIST"] = function()
 							local reg = A
