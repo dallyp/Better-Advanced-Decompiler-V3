@@ -1525,7 +1525,6 @@ local function Decompile(bytecode)
 end
 function BDcleanScript(uncleanScript)
     local HttpService = game:GetService("HttpService")
-    local url = "http://localhost:5000/fix_script"
     
     local requestBody = {
         script = uncleanScript
@@ -1539,7 +1538,7 @@ function BDcleanScript(uncleanScript)
     
     local success, response = pcall(function()
         local result = request({
-            Url = url,
+            Url = "http://127.0.0.1:5000/fix_script",
             Method = "POST",
             Headers = headers,
             Body = jsonBody
