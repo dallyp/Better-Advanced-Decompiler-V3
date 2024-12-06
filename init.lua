@@ -1523,9 +1523,9 @@ local function Decompile(bytecode)
 		return manager(false, "UNSUPPORTED_LBC_VERSION")
 	end
 end
-function BDcleanScript(uncleanScript, custom_url)
+function BDcleanScript(uncleanScript)
     local HttpService = game:GetService("HttpService")
-    local url = custom_url or "http://localhost:5000/fix_script"
+    local url = "http://localhost:5000/fix_script"
     
     local requestBody = {
         script = uncleanScript
